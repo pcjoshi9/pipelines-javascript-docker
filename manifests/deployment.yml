@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pcjoshipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pcjoshipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pcjoshipipelinesjavascriptdocker 
+          image: rlincregistry.azurecr.io/pcjoshipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
